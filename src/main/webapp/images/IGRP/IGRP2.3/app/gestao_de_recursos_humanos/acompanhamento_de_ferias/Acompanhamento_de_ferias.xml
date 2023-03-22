@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/IGRP-Template/images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/acompanhamento_de_ferias/Acompanhamento_de_ferias.xsl" type="text/xsl"?>
+<rows>
+    <link_img>/IGRP-Template/images/IGRP/IGRP2.3</link_img>
+    <title>Dummie XML prototype</title>
+    <site>
+        <welcome_note>Oba</welcome_note>
+        <footer_note>2019 - Copyright NOSI v.190711</footer_note>
+        <user_name>Hexagon</user_name>
+        <button type="specific">
+            <title>Sair</title>
+            <app>DUA</app>
+            <page />
+            <link>#</link>
+            <target>_self</target>
+            <img>exit.png</img>
+        </button>
+    </site>
+    <page>Acompanhamento_de_ferias</page>
+    <app>gestao_de_recursos_humanos</app>
+    <plsql>
+        <action>index</action>
+        <package_instance></package_instance>
+        <package_db>nosi.webapps.gestao_de_recursos_humanos.pages</package_db>
+        <package_html>Acompanhamento_de_ferias</package_html>
+        <table_name></table_name>
+        <with_replace>false</with_replace>
+        <with_label>false</with_label>
+        <with_biztalk>false</with_biztalk>
+        <dynamic_menu>false</dynamic_menu>
+        <copy_menu>false</copy_menu>
+        <package_copy_db />
+        <package_copy_html />
+        <preserve_url>webapps?r=igrp/page/preserveUrl&amp;p_id=95</preserve_url>
+    </plsql>
+    <slide-menu file="../images/IGRP/IGRP2.3/xml/IGRP-slide-menu.xml?v=2" />
+    <top_menu file="../images/IGRP/IGRP2.3/xml/IGRP-top_menu.xml?v=2" />
+    <content>
+        <title>Acompanhamento de Férias</title>
+        <form_1 type="form" xml-type="form" title="Filtrar por..." gen-type="container" gen-group="">
+            <fields>
+                <departamento_id name="p_departamento_id" type="select" multiple="false" tags="false" load_service_data="false" domain="" maxlength="250" required="false" change="false" disabled="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Departamento</label>
+                    <list>
+                        <option/>
+                        <option>
+                            <text>Option 1</text>
+                            <value>1</value>
+                        </option>
+                        <option>
+                            <text>Option 2</text>
+                            <value>2</value>
+                        </option>
+                        <option>
+                            <text>Option 3</text>
+                            <value>3</value>
+                        </option>
+                        <option>
+                            <text>Option 4</text>
+                            <value>4</value>
+                        </option>
+                    </list>
+                </departamento_id>
+                <funcao_id name="p_funcao_id" type="select" multiple="false" tags="false" load_service_data="false" domain="" maxlength="250" required="false" change="false" disabled="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Função</label>
+                    <list>
+                        <option/>
+                        <option>
+                            <text>Option 1</text>
+                            <value>1</value>
+                        </option>
+                        <option>
+                            <text>Option 2</text>
+                            <value>2</value>
+                        </option>
+                        <option>
+                            <text>Option 3</text>
+                            <value>3</value>
+                        </option>
+                        <option>
+                            <text>Option 4</text>
+                            <value>4</value>
+                        </option>
+                    </list>
+                </funcao_id>
+            </fields>
+            <tools-bar>
+                <item id="button_c48d_8c45" type="form" code="" class="grey" rel="filtrar" refresh_components="table_1">
+                    <title>Filtrar</title>
+                    <app>gestao_de_recursos_humanos</app>
+                    <page>Acompanhamento_de_ferias</page>
+                    <link>index</link>
+                    <parameter>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/acompanhamento_de_ferias/Acompanhamento_de_ferias.xml?</parameter>
+                    <target>submit_ajax</target>
+                    <img>grey|fa-filter</img>
+                    <preview>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/acompanhamento_de_ferias/Acompanhamento_de_ferias.xml</preview>
+                </item>
+            </tools-bar>
+        </form_1>
+        <sectionheader_1 type="sectionheader" xml-type="form" gen-type="container" gen-group="">
+            <fields>
+                <sectionheader_1_text type="text" name="p_sectionheader_1_text" persist="true" maxlength="4000">
+                    <value>
+                        <![CDATA[<p><strong><span style='font-size:26px;'><span style='font-family:Comic Sans MS,cursive;'>F&eacute;rias da Empresa</span></span></strong></p>
+]]>
+                    </value>
+                </sectionheader_1_text>
+            </fields>
+        </sectionheader_1>
+        <table_1 type="table" xml-type="table" gen-type="container" gen-group="true">
+            <fields>
+                <status_legen name="p_status_legen" type="color" format="hex" maxlength="30" showLabel="false" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Status_legen</label>
+                </status_legen>
+                <departamento name="p_departamento" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Departamento</label>
+                </departamento>
+                <funcao name="p_funcao" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="funcionario">
+                    <label>Função</label>
+                </funcao>
+                <funcionario name="p_funcionario" type="text" maxlength="100" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Funcionário</label>
+                </funcionario>
+                <inicio_em name="p_inicio_em" type="date" range="false" disableWeekends="false" disabledBeforetoday="false" daysoff="false" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Inicio em</label>
+                </inicio_em>
+                <dias name="p_dias" type="number" min="" max="" calculation="false" mathcal="" numberformat="" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" total_footer="false" group_in="inicio_em" java-type="">
+                    <label>Dias</label>
+                </dias>
+                <aprovador name="p_aprovador" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Aprovador</label>
+                </aprovador>
+                <estado name="p_estado" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Estado</label>
+                </estado>
+                <id name="p_id" type="hidden" maxlength="30" showLabel="true" iskey="true" group_in="" java-type="Integer" tag="id"/>
+            </fields>
+            <table>
+                <value>
+                    <row>
+                        <context-menu>
+                            <param>p1=linha1</param>
+                            <param>p2=linha1</param>
+                        </context-menu>
+                        <status_legen name="p_status_legen">FINALIZADO</status_legen>
+                        <departamento name="p_departamento">Sed deserunt natus doloremque</departamento>
+                        <funcao name="p_funcao">Mollit sit perspiciatis elit u</funcao>
+                        <funcionario name="p_funcionario">Accusantium rem perspiciatis ut anim</funcionario>
+                        <inicio_em name="p_inicio_em">02-05-2017</inicio_em>
+                        <dias name="p_dias">21</dias>
+                        <aprovador name="p_aprovador">Mollit elit ipsum deserunt per</aprovador>
+                        <estado name="p_estado">Aliqua amet magna ipsum sed</estado>
+                        <id name="p_id" tag="id">hidden-37b7_546a</id>
+                    </row>
+                    <row>
+                        <context-menu>
+                            <param>p1=linha1</param>
+                            <param>p2=linha1</param>
+                        </context-menu>
+                        <status_legen name="p_status_legen">PEDIDO</status_legen>
+                        <departamento name="p_departamento">Natus adipiscing accusantium i</departamento>
+                        <funcao name="p_funcao">Magna mollit sed ipsum dolorem</funcao>
+                        <funcionario name="p_funcionario">Iste mollit unde aperiam doloremque</funcionario>
+                        <inicio_em name="p_inicio_em">01-04-2012</inicio_em>
+                        <dias name="p_dias">0</dias>
+                        <aprovador name="p_aprovador">Labore accusantium iste lorem</aprovador>
+                        <estado name="p_estado">Iste laudantium doloremque ali</estado>
+                        <id name="p_id" tag="id">hidden-cd86_52c5</id>
+                    </row>
+                    <row>
+                        <context-menu>
+                            <param>p1=linha1</param>
+                            <param>p2=linha1</param>
+                        </context-menu>
+                        <status_legen name="p_status_legen">AUTORIZADO</status_legen>
+                        <departamento name="p_departamento">Sit amet sit dolor labore</departamento>
+                        <funcao name="p_funcao">Adipiscing mollit sit rem moll</funcao>
+                        <funcionario name="p_funcionario">Doloremque consectetur sit perspiciatis consectetur</funcionario>
+                        <inicio_em name="p_inicio_em">01-06-2015</inicio_em>
+                        <dias name="p_dias">23</dias>
+                        <aprovador name="p_aprovador">Perspiciatis deserunt elit vol</aprovador>
+                        <estado name="p_estado">Sit doloremque iste aliqua ut</estado>
+                        <id name="p_id" tag="id">hidden-da2a_f305</id>
+                    </row>
+                    <row>
+                        <context-menu>
+                            <param>p1=linha1</param>
+                            <param>p2=linha1</param>
+                        </context-menu>
+                        <status_legen name="p_status_legen">PEDIDO</status_legen>
+                        <departamento name="p_departamento">Officia consectetur doloremque</departamento>
+                        <funcao name="p_funcao">Sed ipsum dolor doloremque sit</funcao>
+                        <funcionario name="p_funcionario">Consectetur omnis anim totam doloremque</funcionario>
+                        <inicio_em name="p_inicio_em">07-03-2017</inicio_em>
+                        <dias name="p_dias">17</dias>
+                        <aprovador name="p_aprovador">Accusantium elit consectetur s</aprovador>
+                        <estado name="p_estado">Unde lorem adipiscing elit eli</estado>
+                        <id name="p_id" tag="id">hidden-05f6_ee83</id>
+                    </row>
+                    <row>
+                        <context-menu>
+                            <param>p1=linha1</param>
+                            <param>p2=linha1</param>
+                        </context-menu>
+                        <status_legen name="p_status_legen">PARECER</status_legen>
+                        <departamento name="p_departamento">Deserunt omnis consectetur lab</departamento>
+                        <funcao name="p_funcao">Voluptatem ut mollit lorem ali</funcao>
+                        <funcionario name="p_funcionario">Doloremque voluptatem sit officia totam</funcionario>
+                        <inicio_em name="p_inicio_em">01-07-2016</inicio_em>
+                        <dias name="p_dias">4</dias>
+                        <aprovador name="p_aprovador">Officia perspiciatis deserunt</aprovador>
+                        <estado name="p_estado">Totam adipiscing aliqua aperia</estado>
+                        <id name="p_id" tag="id">hidden-88f3_c0bb</id>
+                    </row>
+                </value>
+                <legend_color>
+                    <item>
+                        <label>Aguarda Parecer</label>
+                        <value>PEDIDO</value>
+                        <color>#dc2b4c</color>
+                    </item>
+                    <item>
+                        <label>Aguarda Autorização</label>
+                        <value>PARECER</value>
+                        <color>#ea9126</color>
+                    </item>
+                    <item>
+                        <label>Autorizado</label>
+                        <value>AUTORIZADO</value>
+                        <color>#95c11f</color>
+                    </item>
+                    <item>
+                        <label>Aguarda Retificação</label>
+                        <value>RETIFICAR</value>
+                        <color>#ebbc90</color>
+                    </item>
+                    <item>
+                        <label>Cancelado</label>
+                        <value>CANCELADO</value>
+                        <color>#000000</color>
+                    </item>
+                    <item>
+                        <label>Em Férias</label>
+                        <value>EM_FERIAS</value>
+                        <color>#18d416</color>
+                    </item>
+                    <item>
+                        <label>Regresso</label>
+                        <value>FINALIZADO</value>
+                        <color>#5bdfe8</color>
+                    </item>
+                </legend_color>
+                <context-menu>
+                    <item id="button_433c_3bc9" type="specific" code="" class="link" rel="retificacao" refresh_components="">
+                        <title>Retificação</title>
+                        <app>gestao_de_recursos_humanos</app>
+                        <page>Pedido</page>
+                        <link>index</link>
+                        <parameter>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/pedido/Pedido.xml?</parameter>
+                        <target>modal</target>
+                        <img>link|fa-pencil</img>
+                        <preview>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/pedido/Pedido.xml</preview>
+                    </item>
+                    <item id="button_3e57_63a3" type="specific" code="" class="link" rel="autorizacao" refresh_components="">
+                        <title>Autorização</title>
+                        <app>gestao_de_recursos_humanos</app>
+                        <page>Autorizacao</page>
+                        <link>index</link>
+                        <parameter>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/autorizacao/Autorizacao.xml?</parameter>
+                        <target>modal</target>
+                        <img>link|fa-check</img>
+                        <preview>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/autorizacao/Autorizacao.xml</preview>
+                    </item>
+                    <item id="button_d599_ade9" type="specific" code="" class="link" rel="parecer" refresh_components="">
+                        <title>Parecer</title>
+                        <app>gestao_de_recursos_humanos</app>
+                        <page>Parecer</page>
+                        <link>index</link>
+                        <parameter>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/parecer/Parecer.xml?</parameter>
+                        <target>modal</target>
+                        <img>link|fa-check</img>
+                        <preview>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/parecer/Parecer.xml</preview>
+                    </item>
+                    <item id="button_e632_1c20" type="specific" code="" class="link" rel="fui" refresh_components="" labelConfirm="Deseja realmente realizar esta operação?">
+                        <title>Fui</title>
+                        <app>gestao_de_recursos_humanos</app>
+                        <page>Acompanhamento_de_ferias</page>
+                        <link>index</link>
+                        <parameter>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/acompanhamento_de_ferias/Acompanhamento_de_ferias.xml?</parameter>
+                        <target>confirm</target>
+                        <img>link|fa-play</img>
+                        <preview>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/acompanhamento_de_ferias/Acompanhamento_de_ferias.xml</preview>
+                    </item>
+                    <item id="button_66c5_2b4e" type="specific" code="" class="link" rel="voltei" refresh_components="" labelConfirm="Deseja realmente realizar esta operação?">
+                        <title>Voltei</title>
+                        <app>gestao_de_recursos_humanos</app>
+                        <page>Acompanhamento_de_ferias</page>
+                        <link>index</link>
+                        <parameter>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/acompanhamento_de_ferias/Acompanhamento_de_ferias.xml?</parameter>
+                        <target>confirm</target>
+                        <img>link|fa-stop</img>
+                        <preview>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/acompanhamento_de_ferias/Acompanhamento_de_ferias.xml</preview>
+                    </item>
+                    <item id="button_6069_39a3" type="specific" code="" class="link" rel="cancelar" refresh_components="" labelConfirm="Deseja realmente realizar esta operação?">
+                        <title>Cancelar</title>
+                        <app>gestao_de_recursos_humanos</app>
+                        <page>Acompanhamento_de_ferias</page>
+                        <link>index</link>
+                        <parameter>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/acompanhamento_de_ferias/Acompanhamento_de_ferias.xml?</parameter>
+                        <target>confirm</target>
+                        <img>link|fa-times</img>
+                        <preview>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/acompanhamento_de_ferias/Acompanhamento_de_ferias.xml</preview>
+                    </item>
+                </context-menu>
+            </table>
+        </table_1>
+        <registar_frias type="toolsbar" xml-type="toolsbar" gen-type="menu" gen-group="">
+            <item type="specific" code="" rel="registar_ferias" refresh_components="">
+                <title>Registar Férias</title>
+                <app>gestao_de_recursos_humanos</app>
+                <page>Pedido</page>
+                <link>index</link>
+                <target>modal</target>
+                <img>primary|fa-pause</img>
+                <preview>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/pedido/Pedido.xml</preview>
+            </item>
+        </registar_frias>
+    </content>
+    <blockly>
+        <imports></imports>
+        <xml>
+            <block type="controller" id="controller" x="388" y="13"></block>
+        </xml>
+    </blockly>
+</rows>

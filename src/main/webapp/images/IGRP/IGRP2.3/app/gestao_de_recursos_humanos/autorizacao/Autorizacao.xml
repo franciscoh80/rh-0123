@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/IGRP-Template/images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/autorizacao/Autorizacao.xsl" type="text/xsl"?>
+<rows>
+    <link_img>/IGRP-Template/images/IGRP/IGRP2.3</link_img>
+    <title>Dummie XML prototype</title>
+    <site>
+        <welcome_note>Oba</welcome_note>
+        <footer_note>2019 - Copyright NOSI v.190711</footer_note>
+        <user_name>Hexagon</user_name>
+        <button type="specific">
+            <title>Sair</title>
+            <app>DUA</app>
+            <page />
+            <link>#</link>
+            <target>_self</target>
+            <img>exit.png</img>
+        </button>
+    </site>
+    <page>Autorizacao</page>
+    <app>gestao_de_recursos_humanos</app>
+    <plsql>
+        <action>index</action>
+        <package_instance></package_instance>
+        <package_db>nosi.webapps.gestao_de_recursos_humanos.pages</package_db>
+        <package_html>Autorizacao</package_html>
+        <table_name></table_name>
+        <with_replace>false</with_replace>
+        <with_label>false</with_label>
+        <with_biztalk>false</with_biztalk>
+        <dynamic_menu>false</dynamic_menu>
+        <copy_menu>false</copy_menu>
+        <package_copy_db />
+        <package_copy_html />
+        <preserve_url>webapps?r=igrp/page/preserveUrl&amp;p_id=98</preserve_url>
+    </plsql>
+    <slide-menu file="../images/IGRP/IGRP2.3/xml/IGRP-slide-menu.xml?v=2" />
+    <top_menu file="../images/IGRP/IGRP2.3/xml/IGRP-top_menu.xml?v=2" />
+    <content>
+        <title>Autorização</title>
+        <form_1 type="form" xml-type="form" gen-type="container" gen-group="">
+            <fields>
+                <mapa_de_ferias name="p_mapa_de_ferias" type="separator" maxlength="250" placeholder="" desclabel="false" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Mapa de Férias</label>
+                </mapa_de_ferias>
+                <funcionario name="p_funcionario" type="text" maxlength="250" required="false" change="false" readonly="true" disabled="false" disablehtml="true" placeholder="" desclabel="false" inputmask="" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Funcionário</label>
+                    <value>Adipiscing aliqua ut accusantium doloremque</value>
+                </funcionario>
+                <dias_ano_ante name="p_dias_ano_ante" type="number" min="" max="" calculation="false" mathcal="" numberformat="" maxlength="250" required="false" change="false" readonly="true" disabled="false" placeholder="" desclabel="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Dias Ano Ante.</label>
+                    <value>2</value>
+                </dias_ano_ante>
+                <dias_ano_atual name="p_dias_ano_atual" type="number" min="" max="" calculation="false" mathcal="" numberformat="" maxlength="250" required="false" change="false" readonly="true" disabled="false" placeholder="" desclabel="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Dias Ano Atual</label>
+                    <value>214</value>
+                </dias_ano_atual>
+                <total_de_dias name="p_total_de_dias" type="number" min="" max="" calculation="true" mathcal="({p_dias_ano_ante}+{p_dias_ano_atual})" numberformat="round" maxlength="250" required="false" change="false" readonly="true" disabled="false" placeholder="" desclabel="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Total de Dias</label>
+                    <value>188</value>
+                </total_de_dias>
+                <info_ferias name="p_info_ferias" type="separator" maxlength="250" placeholder="" desclabel="false" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Info Férias</label>
+                </info_ferias>
+                <data_de_inicio name="p_data_de_inicio" type="text" maxlength="250" required="false" change="false" readonly="true" disabled="false" disablehtml="true" placeholder="" desclabel="false" inputmask="" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Data de Inicio</label>
+                    <value>Unde ipsum aliqua sit officia</value>
+                </data_de_inicio>
+                <nr_dias name="p_nr_dias" type="number" min="" max="" calculation="false" mathcal="" numberformat="" maxlength="250" required="false" change="false" readonly="true" disabled="false" placeholder="" desclabel="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Nr Dias</label>
+                    <value>181</value>
+                </nr_dias>
+                <info_parecer name="p_info_parecer" type="separator" maxlength="250" placeholder="" desclabel="false" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Info Parecer</label>
+                </info_parecer>
+                <parecer name="p_parecer" type="text" maxlength="250" required="false" change="false" readonly="true" disabled="false" disablehtml="true" placeholder="" desclabel="false" inputmask="" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Parecer</label>
+                    <value>Laudantium voluptatem amet mollit sit</value>
+                </parecer>
+                <obs_parcer name="p_obs_parcer" type="textarea" maxlength="4000" required="false" change="false" readonly="true" disabled="false" disablehtml="true" placeholder="" desclabel="false" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Observação</label>
+                    <value>Aperiam unde mollit adipiscing laudantium sit anim unde iste doloremque omnis labore magna anim labore</value>
+                </obs_parcer>
+                <info_autorizacao name="p_info_autorizacao" type="separator" maxlength="250" placeholder="" desclabel="false" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Info Autorização</label>
+                </info_autorizacao>
+                <autorizacao name="p_autorizacao" type="select" multiple="false" tags="false" load_service_data="false" domain="AUTORIZACAO « gestao_de_recursos_humanos" maxlength="250" required="true" change="false" disabled="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Autorização</label>
+                    <list>
+                        <option/>
+                        <option>
+                            <text>A</text>
+                            <value>Autorizado</value>
+                        </option>
+                        <option>
+                            <text>D</text>
+                            <value>Desautorizado</value>
+                        </option>
+                    </list>
+                    <validations>
+                        <validation>
+                            <annotation>@NotNull</annotation>
+                        </validation>
+                    </validations>
+                </autorizacao>
+                <obs_autorizacao name="p_obs_autorizacao" type="textarea" maxlength="4000" required="false" change="false" readonly="false" disabled="false" disablehtml="true" placeholder="" desclabel="false" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Observação</label>
+                    <value>Labore iste sit elit unde perspiciatis adipiscing anim deserunt rem sit deserunt unde ipsum officia</value>
+                </obs_autorizacao>
+                <hidden name="p_id" type="hidden" maxlength="250" java-type="" tooltip="false" disable_copy_paste="false" tag="id"/>
+            </fields>
+        </form_1>
+        <toolsbar_1 type="toolsbar" xml-type="toolsbar" gen-type="menu" gen-group="">
+            <item type="specific" code="" rel="registar_autorizacao" refresh_components="">
+                <title>Registar Autorização</title>
+                <app>gestao_de_recursos_humanos</app>
+                <page>Funcionario</page>
+                <link>index</link>
+                <target>_blank</target>
+                <img>primary|fa-save</img>
+                <preview>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/funcionario/Funcionario.xml</preview>
+            </item>
+        </toolsbar_1>
+    </content>
+    <blockly>
+        <imports></imports>
+        <xml>
+            <block type="controller" id="controller" x="388" y="13"></block>
+        </xml>
+    </blockly>
+</rows>
