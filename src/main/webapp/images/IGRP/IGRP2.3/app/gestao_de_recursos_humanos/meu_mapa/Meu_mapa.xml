@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/IGRP-Template/images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/meu_mapa/Meu_mapa.xsl" type="text/xsl"?>
+<rows>
+    <link_img>/IGRP-Template/images/IGRP/IGRP2.3</link_img>
+    <title>Dummie XML prototype</title>
+    <site>
+        <welcome_note>Oba</welcome_note>
+        <footer_note>2019 - Copyright NOSI v.190711</footer_note>
+        <user_name>Hexagon</user_name>
+        <button type="specific">
+            <title>Sair</title>
+            <app>DUA</app>
+            <page />
+            <link>#</link>
+            <target>_self</target>
+            <img>exit.png</img>
+        </button>
+    </site>
+    <page>Meu_mapa</page>
+    <app>gestao_de_recursos_humanos</app>
+    <plsql>
+        <action>index</action>
+        <package_instance></package_instance>
+        <package_db>nosi.webapps.gestao_de_recursos_humanos.pages</package_db>
+        <package_html>Meu_mapa</package_html>
+        <table_name></table_name>
+        <with_replace>false</with_replace>
+        <with_label>false</with_label>
+        <with_biztalk>false</with_biztalk>
+        <dynamic_menu>false</dynamic_menu>
+        <copy_menu>false</copy_menu>
+        <package_copy_db />
+        <package_copy_html />
+        <preserve_url>webapps?r=igrp/page/preserveUrl&amp;p_id=94</preserve_url>
+    </plsql>
+    <slide-menu file="../images/IGRP/IGRP2.3/xml/IGRP-slide-menu.xml?v=2" />
+    <top_menu file="../images/IGRP/IGRP2.3/xml/IGRP-top_menu.xml?v=2" />
+    <content>
+        <title>Meu Mapa</title>
+        <form_1 type="form" xml-type="form" gen-type="container" gen-group="">
+            <fields>
+                <funcionario name="p_funcionario" type="text" maxlength="250" required="false" change="false" readonly="true" disabled="false" disablehtml="true" placeholder="" desclabel="false" inputmask="" right="false" tooltip="false" disable_copy_paste="false">
+                    <label>Funcionário</label>
+                    <value>Amet labore natus omnis amet</value>
+                </funcionario>
+                <dias_ano_ante name="p_dias_ano_ante" type="number" min="" max="" calculation="false" mathcal="" numberformat="" maxlength="250" required="false" change="false" readonly="false" disabled="false" placeholder="" desclabel="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Dias Ano Ante.</label>
+                    <value>189</value>
+                </dias_ano_ante>
+                <dias_ano_atual name="p_dias_ano_atual" type="number" min="" max="" calculation="false" mathcal="" numberformat="" maxlength="250" required="false" change="false" readonly="false" disabled="false" placeholder="" desclabel="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Dias Ano Atual</label>
+                    <value>102</value>
+                </dias_ano_atual>
+                <total_de_dias name="p_total_de_dias" type="number" min="" max="" calculation="true" mathcal="({p_dias_ano_ante}+{p_dias_ano_atual})" numberformat="round" maxlength="250" required="false" change="false" readonly="false" disabled="false" placeholder="" desclabel="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Total de Dias</label>
+                    <value>146</value>
+                </total_de_dias>
+                <hidden name="p_map_id" type="hidden" maxlength="250" java-type="" tooltip="false" disable_copy_paste="false" tag="map_id"/>
+            </fields>
+        </form_1>
+        <form_2 type="form" xml-type="form" title="1º Periodo" gen-type="container" gen-group="">
+            <fields>
+                <data_inicio_1 name="p_data_inicio_1" type="date" range="false" disableWeekends="false" disabledBeforetoday="false" daysoff="false" maxlength="250" required="false" change="false" readonly="false" disabled="false" placeholder="" desclabel="false" right="false" tooltip="false" disable_copy_paste="false" class="primary">
+                    <label>Data inicio</label>
+                    <value>05-04-2010</value>
+                    <rules/>
+                    <validations>
+                        <validation>
+                            <annotation>@Past</annotation>
+                            <message>Não pode ser data passado</message>
+                        </validation>
+                    </validations>
+                </data_inicio_1>
+                <dias_1 name="p_dias_1" type="number" min="" max="" calculation="false" mathcal="" numberformat="" maxlength="250" required="false" change="false" readonly="false" disabled="false" placeholder="" desclabel="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Dias</label>
+                    <value>198</value>
+                </dias_1>
+            </fields>
+        </form_2>
+        <form_3 type="form" xml-type="form" title="2º Periodo" gen-type="container" gen-group="">
+            <fields>
+                <data_inicio_2 name="p_data_inicio_2" type="date" range="false" disableWeekends="false" disabledBeforetoday="false" daysoff="false" maxlength="250" required="false" change="false" readonly="false" disabled="false" placeholder="" desclabel="false" right="false" tooltip="false" disable_copy_paste="false" class="primary">
+                    <label>Data inicio</label>
+                    <value>04-03-2011</value>
+                </data_inicio_2>
+                <dias_2 name="p_dias_2" type="number" min="" max="" calculation="false" mathcal="" numberformat="" maxlength="250" required="false" change="false" readonly="false" disabled="false" placeholder="" desclabel="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Dias</label>
+                    <value>36</value>
+                </dias_2>
+            </fields>
+        </form_3>
+        <form_4 type="form" xml-type="form" title="3º Periodo" gen-type="container" gen-group="">
+            <fields>
+                <data_inicio_3 name="p_data_inicio_3" type="date" range="false" disableWeekends="false" disabledBeforetoday="false" daysoff="false" maxlength="250" required="false" change="false" readonly="false" disabled="false" placeholder="" desclabel="false" right="false" tooltip="false" disable_copy_paste="false" class="primary">
+                    <label>Data inicio</label>
+                    <value>02-07-2015</value>
+                </data_inicio_3>
+                <dias_3 name="p_dias_3" type="number" min="" max="" calculation="false" mathcal="" numberformat="" maxlength="250" required="false" change="false" readonly="false" disabled="false" placeholder="" desclabel="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Dias</label>
+                    <value>141</value>
+                </dias_3>
+            </fields>
+        </form_4>
+        <form_5 type="form" xml-type="form" title="4º Periodo" gen-type="container" gen-group="">
+            <fields>
+                <data_inicio_4 name="p_data_inicio_4" type="date" range="false" disableWeekends="false" disabledBeforetoday="false" daysoff="false" maxlength="250" required="false" change="false" readonly="false" disabled="false" placeholder="" desclabel="false" right="false" tooltip="false" disable_copy_paste="false" class="primary">
+                    <label>Data inicio</label>
+                    <value>07-03-2010</value>
+                </data_inicio_4>
+                <dias_4 name="p_dias_4" type="number" min="" max="" calculation="false" mathcal="" numberformat="" maxlength="250" required="false" change="false" readonly="false" disabled="false" placeholder="" desclabel="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Dias</label>
+                    <value>0</value>
+                </dias_4>
+            </fields>
+        </form_5>
+        <toolsbar_1 type="toolsbar" xml-type="toolsbar" gen-type="menu" gen-group="">
+            <item type="specific" code="" rel="gravar" refresh_components="">
+                <title>Gravar</title>
+                <app>gestao_de_recursos_humanos</app>
+                <page>Meu_mapa</page>
+                <link>index</link>
+                <target>submit</target>
+                <img>primary|fa-calendar-check-o</img>
+                <preview>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/meu_mapa/Meu_mapa.xml</preview>
+            </item>
+        </toolsbar_1>
+    </content>
+    <blockly>
+        <imports></imports>
+        <xml>
+            <block type="controller" id="controller" x="388" y="13"></block>
+        </xml>
+    </blockly>
+</rows>

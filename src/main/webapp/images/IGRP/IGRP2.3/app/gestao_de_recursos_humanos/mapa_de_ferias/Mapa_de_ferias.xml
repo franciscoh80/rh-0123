@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/IGRP-Template/images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/mapa_de_ferias/Mapa_de_ferias.xsl" type="text/xsl"?>
+<rows>
+    <link_img>/IGRP-Template/images/IGRP/IGRP2.3</link_img>
+    <title>Dummie XML prototype</title>
+    <site>
+        <welcome_note>Oba</welcome_note>
+        <footer_note>2019 - Copyright NOSI v.190711</footer_note>
+        <user_name>Hexagon</user_name>
+        <button type="specific">
+            <title>Sair</title>
+            <app>DUA</app>
+            <page />
+            <link>#</link>
+            <target>_self</target>
+            <img>exit.png</img>
+        </button>
+    </site>
+    <page>Mapa_de_ferias</page>
+    <app>gestao_de_recursos_humanos</app>
+    <plsql>
+        <action>index</action>
+        <package_instance></package_instance>
+        <package_db>nosi.webapps.gestao_de_recursos_humanos.pages</package_db>
+        <package_html>Mapa_de_ferias</package_html>
+        <table_name></table_name>
+        <with_replace>false</with_replace>
+        <with_label>false</with_label>
+        <with_biztalk>false</with_biztalk>
+        <dynamic_menu>false</dynamic_menu>
+        <copy_menu>false</copy_menu>
+        <package_copy_db />
+        <package_copy_html />
+        <preserve_url>webapps?r=igrp/page/preserveUrl&amp;p_id=93</preserve_url>
+    </plsql>
+    <slide-menu file="../images/IGRP/IGRP2.3/xml/IGRP-slide-menu.xml?v=2" />
+    <top_menu file="../images/IGRP/IGRP2.3/xml/IGRP-top_menu.xml?v=2" />
+    <content>
+        <title>Mapa de Férias</title>
+        <sectionheader_1 type="sectionheader" xml-type="form" gen-type="container" gen-group="">
+            <fields>
+                <sectionheader_1_text type="text" name="p_sectionheader_1_text" persist="true" maxlength="4000">
+                    <value>
+                        <![CDATA[<p><span style='font-size:18px;'><span style='font-family:Comic Sans MS,cursive;'>Mapa de F&eacute;rias do Ano $ano$</span></span></p>
+]]>
+                    </value>
+                </sectionheader_1_text>
+            </fields>
+        </sectionheader_1>
+        <form_1 type="form" xml-type="form" title="Filtrar por..." gen-type="container" gen-group="">
+            <fields>
+                <ano name="p_ano" type="select" multiple="false" tags="false" load_service_data="false" domain="ANO « gestao_de_recursos_humanos" maxlength="250" required="true" change="false" disabled="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Ano</label>
+                    <list>
+                        <option/>
+                        <option>
+                            <text>2022</text>
+                            <value>2022</value>
+                        </option>
+                        <option>
+                            <text>2023</text>
+                            <value>2023</value>
+                        </option>
+                    </list>
+                    <validations>
+                        <validation>
+                            <annotation>@NotNull</annotation>
+                        </validation>
+                    </validations>
+                </ano>
+                <departamento_id name="p_departamento_id" type="select" multiple="false" tags="false" load_service_data="false" domain="" maxlength="250" required="false" change="false" disabled="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Departamento</label>
+                    <list>
+                        <option/>
+                        <option>
+                            <text>Option 1</text>
+                            <value>1</value>
+                        </option>
+                        <option>
+                            <text>Option 2</text>
+                            <value>2</value>
+                        </option>
+                        <option>
+                            <text>Option 3</text>
+                            <value>3</value>
+                        </option>
+                        <option>
+                            <text>Option 4</text>
+                            <value>4</value>
+                        </option>
+                    </list>
+                </departamento_id>
+                <funcao_id name="p_funcao_id" type="select" multiple="false" tags="false" load_service_data="false" domain="" maxlength="250" required="false" change="false" disabled="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Função</label>
+                    <list>
+                        <option/>
+                        <option>
+                            <text>Option 1</text>
+                            <value>1</value>
+                        </option>
+                        <option>
+                            <text>Option 2</text>
+                            <value>2</value>
+                        </option>
+                        <option>
+                            <text>Option 3</text>
+                            <value>3</value>
+                        </option>
+                        <option>
+                            <text>Option 4</text>
+                            <value>4</value>
+                        </option>
+                    </list>
+                </funcao_id>
+            </fields>
+            <tools-bar>
+                <item id="button_c48d_8c45" type="form" code="" class="grey" rel="filtrar" custom_return="true" refresh_components="table_1">
+                    <title>Filtrar</title>
+                    <app>gestao_de_recursos_humanos</app>
+                    <page>Lista_de_funcionarios</page>
+                    <link>index</link>
+                    <parameter>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/lista_de_funcionarios/Lista_de_funcionarios.xml?</parameter>
+                    <target>submit_ajax</target>
+                    <img>grey|fa-filter</img>
+                    <preview>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/lista_de_funcionarios/Lista_de_funcionarios.xml</preview>
+                </item>
+            </tools-bar>
+        </form_1>
+        <toolsbar_1 type="toolsbar" xml-type="toolsbar" gen-type="menu" gen-group="">
+            <item type="specific" code="" rel="novo_mapa" flg_transaction="true" refresh_components="" labelConfirm="Deseja realmente realizar esta operação?">
+                <title>Novo Mapa</title>
+                <app>gestao_de_recursos_humanos</app>
+                <page>Mapa_de_ferias</page>
+                <link>index</link>
+                <target>alert_submit</target>
+                <img>primary|fa-gears</img>
+                <preview>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/mapa_de_ferias/Mapa_de_ferias.xml</preview>
+            </item>
+        </toolsbar_1>
+        <table_1 type="table" xml-type="table" gen-type="container" gen-group="true">
+            <fields>
+                <funcionario name="p_funcionario" type="text" maxlength="100" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Funcionário</label>
+                </funcionario>
+                <departamento name="p_departamento" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>Departamento</label>
+                </departamento>
+                <funcao name="p_funcao" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="funcionario">
+                    <label>Função</label>
+                </funcao>
+                <dias_ano_ante name="p_dias_ano_ante" type="number" min="" max="" calculation="false" mathcal="" numberformat="" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" total_footer="false" group_in="" java-type="">
+                    <label>Dias ano ante.</label>
+                </dias_ano_ante>
+                <dias_ano_atual name="p_dias_ano_atual" type="number" min="" max="" calculation="false" mathcal="" numberformat="" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" total_footer="false" group_in="" java-type="">
+                    <label>Dias ano atual</label>
+                </dias_ano_atual>
+                <periodo_1 name="p_periodo_1" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>1º Periodo</label>
+                </periodo_1>
+                <periodo_2 name="p_periodo_2" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>2º Periodo</label>
+                </periodo_2>
+                <periodo_3 name="p_periodo_3" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>3º Periodo</label>
+                </periodo_3>
+                <periodo_4 name="p_periodo_4" type="text" maxlength="30" showLabel="true" align="left" lookup_parser="false" iskey="false" group_in="">
+                    <label>4º Periodo</label>
+                </periodo_4>
+                <map_id name="p_map_id" type="hidden" maxlength="30" showLabel="true" iskey="true" group_in="" java-type="" tag="map_id"/>
+            </fields>
+            <table>
+                <value>
+                    <row>
+                        <context-menu>
+                            <param>p1=linha1</param>
+                            <param>p2=linha1</param>
+                        </context-menu>
+                        <funcionario name="p_funcionario">Voluptatem magna anim deserunt perspiciatis</funcionario>
+                        <departamento name="p_departamento">Sit rem natus voluptatem sit</departamento>
+                        <funcao name="p_funcao">Elit voluptatem perspiciatis s</funcao>
+                        <dias_ano_ante name="p_dias_ano_ante">5</dias_ano_ante>
+                        <dias_ano_atual name="p_dias_ano_atual">13</dias_ano_atual>
+                        <periodo_1 name="p_periodo_1">Labore deserunt sit unde natus</periodo_1>
+                        <periodo_2 name="p_periodo_2">Lorem ut lorem deserunt sit</periodo_2>
+                        <periodo_3 name="p_periodo_3">Sed iste natus consectetur eli</periodo_3>
+                        <periodo_4 name="p_periodo_4">Accusantium sit lorem rem sit</periodo_4>
+                        <map_id name="p_map_id" tag="map_id">hidden-7729_9790</map_id>
+                    </row>
+                    <row>
+                        <context-menu>
+                            <param>p1=linha1</param>
+                            <param>p2=linha1</param>
+                        </context-menu>
+                        <funcionario name="p_funcionario">Sit elit accusantium rem amet</funcionario>
+                        <departamento name="p_departamento">Magna ut consectetur stract si</departamento>
+                        <funcao name="p_funcao">Accusantium perspiciatis labor</funcao>
+                        <dias_ano_ante name="p_dias_ano_ante">7</dias_ano_ante>
+                        <dias_ano_atual name="p_dias_ano_atual">18</dias_ano_atual>
+                        <periodo_1 name="p_periodo_1">Sit perspiciatis unde aliqua a</periodo_1>
+                        <periodo_2 name="p_periodo_2">Aperiam magna mollit natus lor</periodo_2>
+                        <periodo_3 name="p_periodo_3">Anim natus adipiscing magna of</periodo_3>
+                        <periodo_4 name="p_periodo_4">Consectetur omnis adipiscing l</periodo_4>
+                        <map_id name="p_map_id" tag="map_id">hidden-b48c_a75b</map_id>
+                    </row>
+                    <row>
+                        <context-menu>
+                            <param>p1=linha1</param>
+                            <param>p2=linha1</param>
+                        </context-menu>
+                        <funcionario name="p_funcionario">Labore ipsum sit mollit ipsum</funcionario>
+                        <departamento name="p_departamento">Omnis perspiciatis voluptatem</departamento>
+                        <funcao name="p_funcao">Doloremque sed totam unde ipsu</funcao>
+                        <dias_ano_ante name="p_dias_ano_ante">28</dias_ano_ante>
+                        <dias_ano_atual name="p_dias_ano_atual">25</dias_ano_atual>
+                        <periodo_1 name="p_periodo_1">Sit aperiam labore lorem deser</periodo_1>
+                        <periodo_2 name="p_periodo_2">Accusantium magna voluptatem l</periodo_2>
+                        <periodo_3 name="p_periodo_3">Laudantium perspiciatis accusa</periodo_3>
+                        <periodo_4 name="p_periodo_4">Deserunt laudantium magna adip</periodo_4>
+                        <map_id name="p_map_id" tag="map_id">hidden-edf0_b31b</map_id>
+                    </row>
+                    <row>
+                        <context-menu>
+                            <param>p1=linha1</param>
+                            <param>p2=linha1</param>
+                        </context-menu>
+                        <funcionario name="p_funcionario">Perspiciatis magna stract aperiam lorem</funcionario>
+                        <departamento name="p_departamento">Unde labore dolor consectetur</departamento>
+                        <funcao name="p_funcao">Dolor magna amet totam magna</funcao>
+                        <dias_ano_ante name="p_dias_ano_ante">27</dias_ano_ante>
+                        <dias_ano_atual name="p_dias_ano_atual">9</dias_ano_atual>
+                        <periodo_1 name="p_periodo_1">Laudantium ut dolor mollit und</periodo_1>
+                        <periodo_2 name="p_periodo_2">Natus ut officia perspiciatis</periodo_2>
+                        <periodo_3 name="p_periodo_3">Iste labore ut anim aliqua</periodo_3>
+                        <periodo_4 name="p_periodo_4">Deserunt stract ut lorem strac</periodo_4>
+                        <map_id name="p_map_id" tag="map_id">hidden-f4a6_e307</map_id>
+                    </row>
+                    <row>
+                        <context-menu>
+                            <param>p1=linha1</param>
+                            <param>p2=linha1</param>
+                        </context-menu>
+                        <funcionario name="p_funcionario">Ipsum natus adipiscing laudantium stract</funcionario>
+                        <departamento name="p_departamento">Stract iste consectetur deseru</departamento>
+                        <funcao name="p_funcao">Deserunt laudantium sit volupt</funcao>
+                        <dias_ano_ante name="p_dias_ano_ante">9</dias_ano_ante>
+                        <dias_ano_atual name="p_dias_ano_atual">18</dias_ano_atual>
+                        <periodo_1 name="p_periodo_1">Rem elit accusantium officia a</periodo_1>
+                        <periodo_2 name="p_periodo_2">Perspiciatis sit totam elit se</periodo_2>
+                        <periodo_3 name="p_periodo_3">Accusantium rem unde mollit si</periodo_3>
+                        <periodo_4 name="p_periodo_4">Laudantium accusantium officia</periodo_4>
+                        <map_id name="p_map_id" tag="map_id">hidden-f51f_eb4f</map_id>
+                    </row>
+                </value>
+                <context-menu>
+                    <item id="button_2fd2_df6c" type="specific" code="" class="primary" rel="meu_mapa" refresh_components="">
+                        <title>Meu Mapa</title>
+                        <app>gestao_de_recursos_humanos</app>
+                        <page>Meu_mapa</page>
+                        <link>index</link>
+                        <parameter>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/meu_mapa/Meu_mapa.xml?</parameter>
+                        <target>modal</target>
+                        <img>primary|fa-calendar</img>
+                        <preview>../images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/meu_mapa/Meu_mapa.xml</preview>
+                    </item>
+                </context-menu>
+            </table>
+        </table_1>
+    </content>
+    <blockly>
+        <imports>
+            <import type="listar">Listar</import>
+            <import type="combo_dao">Combo Dao</import>
+            <import type="dao">TDepartments</import>
+            <import type="dao">TJobs</import>
+            <import type="dao">TVacationMap</import>
+            <import type="dao">TEmployees</import>
+            <import type="fields">LocalDate</import>
+        </imports>
+        <xml>
+            <block type="controller" id="controller" x="388" y="13">
+                <statement name="index">
+                    <block type="comment_code" id="WIrxg[m4R}^8=OrXw)T*">
+                        <statement name="value1">
+                            <block type="controls_if" id="0/~cFYX@jfbnfh#X/d?h">
+                                <value name="IF0">
+                                    <block type="core_fun_verify" id="Uh@I#m@pd!8R29jenc7,">
+                                        <field name="CORE_FUNCTION">verify_is_not_null_or_zero</field>
+                                        <value name="value_default">
+                                            <block type="mod_formform_1" id="~*)Wy:RT~He%X=qAzty(">
+                                                <field name="get_model">String::ano</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                </value>
+                                <statement name="DO0">
+                                    <block type="set_model" id="[CEv7K;oB`GX-bR.yc_Q">
+                                        <field name="set_model">String::ano</field>
+                                        <value name="value1">
+                                            <block type="text" id="u@D7a|pFS(_{}.nQR~8m">
+                                                <field name="TEXT">2023</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                </statement>
+                                <next>
+                                    <block type="combo_dao" id="[5EYT0:o9b3p0|-8OtNB" inline="true">
+                                        <mutation order="null" operation="null" limit="null" collectors="null" crud="null" statistdrop="null" ajax="null" count="NaN"></mutation>
+                                        <field name="selecao">departamento_id</field>
+                                        <field name="dao">TDepartments</field>
+                                        <field name="selecionar">TRUE</field>
+                                        <statement name="key_val">
+                                            <block type="option_dao" id="[2(oyFzPAx`(eP^Hmoqn" inline="true">
+                                                <value name="key_val">
+                                                    <block type="get-dao-TDepartments" id="YaIO4BVP,|8!dc@ZOYM,">
+                                                        <mutation hover_type="Integer_PK#::departmentId"></mutation>
+                                                        <field name="DAO_FIELD">Integer_PK#::departmentId</field>
+                                                    </block>
+                                                </value>
+                                                <value name="value_val">
+                                                    <block type="get-dao-TDepartments" id="?K#s}ye46s(!cMooa2r3">
+                                                        <mutation hover_type="String::departmentName"></mutation>
+                                                        <field name="DAO_FIELD">String::departmentName</field>
+                                                    </block>
+                                                </value>
+                                            </block>
+                                        </statement>
+                                        <next>
+                                            <block type="combo_dao" id="|%]#iC3A2@5S7GlfasU%" inline="true">
+                                                <mutation order="null" operation="null" limit="null" collectors="null" crud="null" statistdrop="null" ajax="null" count="NaN"></mutation>
+                                                <field name="selecao">funcao_id</field>
+                                                <field name="dao">TJobs</field>
+                                                <field name="selecionar">TRUE</field>
+                                                <statement name="key_val">
+                                                    <block type="option_dao" id="#o*aE{2q^=!ki7d[xRa=" inline="true">
+                                                        <value name="key_val">
+                                                            <block type="get-dao-TJobs" id="[d~qx7yw3a{hyHwbBV_5">
+                                                                <mutation hover_type="Integer_PK#::jobId"></mutation>
+                                                                <field name="DAO_FIELD">Integer_PK#::jobId</field>
+                                                            </block>
+                                                        </value>
+                                                        <value name="value_val">
+                                                            <block type="get-dao-TJobs" id="~|P_p}p(p.a%1|}]u@vj">
+                                                                <mutation hover_type="String::jobTitle"></mutation>
+                                                                <field name="DAO_FIELD">String::jobTitle</field>
+                                                            </block>
+                                                        </value>
+                                                    </block>
+                                                </statement>
+                                                <next>
+                                                    <block type="listar_table_1" id="Qx9@_(*W?YK:8oZYNRmF" inline="true">
+                                                        <mutation order="order_by_asc" operation="null" limit="TODOSS" collectors="null" crud="null" statistdrop="null" ajax="null" count="1" mutation-1="andWhere"></mutation>
+                                                        <field name="dao">TVacationMap</field>
+                                                        <field name="FILL">FALSE</field>
+                                                        <field name="orderdrop">order_by_asc</field>
+                                                        <field name="find">TODOSS</field>
+                                                        <field name="limit"></field>
+                                                        <field name="ADD1FILTER">andWhere</field>
+                                                        <field name="ADD1WHERE">WHERE_EQ</field>
+                                                        <value name="order_value">
+                                                            <block type="get-dao-TVacationMap" id="ih7hSEvjf}Gc!Q*_)WWm">
+                                                                <mutation hover_type="TEmployees_FK#::employeeId"></mutation>
+                                                                <field name="DAO_FIELD">TEmployees_FK#::employeeId</field>
+                                                                <value name="dao_rela">
+                                                                    <block type="get-dao-TEmployees" id="GU4d6,XU({*xU}t9R+if">
+                                                                        <mutation hover_type="String::firstName"></mutation>
+                                                                        <field name="DAO_FIELD">String::firstName</field>
+                                                                    </block>
+                                                                </value>
+                                                            </block>
+                                                        </value>
+                                                        <statement name="value2">
+                                                            <block type="rowtableString::funcionario" id="=A=(E;}]ep?MB}.1nNKm">
+                                                                <value name="fields_model">
+                                                                    <block type="concaty" id="?CzRm36u28ypV%Ef*dV6" inline="true">
+                                                                        <mutation count="2"></mutation>
+                                                                        <value name="concat_value">
+                                                                            <block type="get-dao-TVacationMap" id="xpF}|^xN)E}R`J#;|v-,">
+                                                                                <mutation hover_type="TEmployees_FK#::employeeId"></mutation>
+                                                                                <field name="DAO_FIELD">TEmployees_FK#::employeeId</field>
+                                                                                <value name="dao_rela">
+                                                                                    <block type="get-dao-TEmployees" id="uf}8S/Lt?CSsJ25!4Sa@">
+                                                                                        <mutation hover_type="String::firstName"></mutation>
+                                                                                        <field name="DAO_FIELD">String::firstName</field>
+                                                                                    </block>
+                                                                                </value>
+                                                                            </block>
+                                                                        </value>
+                                                                        <value name="CONCAT1">
+                                                                            <block type="text" id="MGu%@o%7,11f30:4AJ32">
+                                                                                <field name="TEXT"></field>
+                                                                            </block>
+                                                                        </value>
+                                                                        <value name="CONCAT2">
+                                                                            <block type="get-dao-TVacationMap" id="#:;vdRfb9E{:,~tEHB%E">
+                                                                                <mutation hover_type="TEmployees_FK#::employeeId"></mutation>
+                                                                                <field name="DAO_FIELD">TEmployees_FK#::employeeId</field>
+                                                                                <value name="dao_rela">
+                                                                                    <block type="get-dao-TEmployees" id="Ly#*`?AXU](wv~fFZ{,W">
+                                                                                        <mutation hover_type="String::lastName"></mutation>
+                                                                                        <field name="DAO_FIELD">String::lastName</field>
+                                                                                    </block>
+                                                                                </value>
+                                                                            </block>
+                                                                        </value>
+                                                                    </block>
+                                                                </value>
+                                                                <next>
+                                                                    <block type="rowtableString::departamento" id="p7,FkC]muAPBt]?e!qM.">
+                                                                        <value name="fields_model">
+                                                                            <block type="get-dao-TVacationMap" id="jW[?@^{_5rKt0M?Nylt8">
+                                                                                <mutation hover_type="TEmployees_FK#::employeeId"></mutation>
+                                                                                <field name="DAO_FIELD">TEmployees_FK#::employeeId</field>
+                                                                                <value name="dao_rela">
+                                                                                    <block type="get-dao-TEmployees" id="7r/v!7j=-EPu^4Vb{D)u">
+                                                                                        <mutation hover_type="TDepartments_FK#::departmentId"></mutation>
+                                                                                        <field name="DAO_FIELD">TDepartments_FK#::departmentId</field>
+                                                                                        <value name="dao_rela">
+                                                                                            <block type="get-dao-TDepartments" id="K;N(;v4o/SUK8+:e7=s:">
+                                                                                                <mutation hover_type="String::departmentName"></mutation>
+                                                                                                <field name="DAO_FIELD">String::departmentName</field>
+                                                                                            </block>
+                                                                                        </value>
+                                                                                    </block>
+                                                                                </value>
+                                                                            </block>
+                                                                        </value>
+                                                                        <next>
+                                                                            <block type="rowtableString::funcao" id=":~_;pgUB(K,bTLlu!`6N">
+                                                                                <value name="fields_model">
+                                                                                    <block type="get-dao-TVacationMap" id="Z)=Im~TleYjL@L-U|+fM">
+                                                                                        <mutation hover_type="TEmployees_FK#::employeeId"></mutation>
+                                                                                        <field name="DAO_FIELD">TEmployees_FK#::employeeId</field>
+                                                                                        <value name="dao_rela">
+                                                                                            <block type="get-dao-TEmployees" id="DhWdg:9e]^F}LPwAO/4N">
+                                                                                                <mutation hover_type="TJobs_FK#::jobId"></mutation>
+                                                                                                <field name="DAO_FIELD">TJobs_FK#::jobId</field>
+                                                                                                <value name="dao_rela">
+                                                                                                    <block type="get-dao-TJobs" id="1;Pq;ed~s30CQb)aaz/N">
+                                                                                                        <mutation hover_type="String::jobTitle"></mutation>
+                                                                                                        <field name="DAO_FIELD">String::jobTitle</field>
+                                                                                                    </block>
+                                                                                                </value>
+                                                                                            </block>
+                                                                                        </value>
+                                                                                    </block>
+                                                                                </value>
+                                                                                <next>
+                                                                                    <block type="rowtableInteger::dias_ano_ante" id=";4!41.U{va4ws,K7TtE4">
+                                                                                        <value name="fields_model">
+                                                                                            <block type="get-dao-TVacationMap" id="{eE]1:c-4|Bc_o5~oM~g">
+                                                                                                <mutation hover_type="Integer::transportedDays"></mutation>
+                                                                                                <field name="DAO_FIELD">Integer::transportedDays</field>
+                                                                                            </block>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                            <block type="rowtableInteger::dias_ano_atual" id="yaAPL=s#U%/?RPpuiRar">
+                                                                                                <value name="fields_model">
+                                                                                                    <block type="math_number" id="OQ/z:6OC8/j393:TnBkM">
+                                                                                                        <field name="NUM">22</field>
+                                                                                                    </block>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                    <block type="controls_if" id="X*Dy._HpQ,*S}fH}je=Z">
+                                                                                                        <value name="IF0">
+                                                                                                            <block type="core_fun_verify" id="z#Y(#n7vy?zW:E*x~#};">
+                                                                                                                <field name="CORE_FUNCTION">verify_is_not_null_or_zero</field>
+                                                                                                                <value name="value_default">
+                                                                                                                    <block type="get-dao-TVacationMap" id="v}Bi/T{a!L5Q!+,(Dv6V">
+                                                                                                                        <mutation hover_type="Integer::days1"></mutation>
+                                                                                                                        <field name="DAO_FIELD">Integer::days1</field>
+                                                                                                                    </block>
+                                                                                                                </value>
+                                                                                                            </block>
+                                                                                                        </value>
+                                                                                                        <statement name="DO0">
+                                                                                                            <block type="rowtableString::periodo_1" id="vv._u_HfuTE%5m7oHM;z">
+                                                                                                                <value name="fields_model">
+                                                                                                                    <block type="concaty" id="{UT#,-+6{waP83}COs~L" inline="true">
+                                                                                                                        <mutation count="3"></mutation>
+                                                                                                                        <value name="concat_value">
+                                                                                                                            <block type="text" id="J~9*@|[TYCVKJBq*GvFs">
+                                                                                                                                <field name="TEXT">Gozo de </field>
+                                                                                                                            </block>
+                                                                                                                        </value>
+                                                                                                                        <value name="CONCAT1">
+                                                                                                                            <block type="get-dao-TVacationMap" id=";u?DA|cz~NV9]LeRv:]I">
+                                                                                                                                <mutation hover_type="Integer::days1"></mutation>
+                                                                                                                                <field name="DAO_FIELD">Integer::days1</field>
+                                                                                                                            </block>
+                                                                                                                        </value>
+                                                                                                                        <value name="CONCAT2">
+                                                                                                                            <block type="text" id="5.phA@7vEA!YV[Wznwgo">
+                                                                                                                                <field name="TEXT"> dia(a) a partir de </field>
+                                                                                                                            </block>
+                                                                                                                        </value>
+                                                                                                                        <value name="CONCAT3">
+                                                                                                                            <block type="get-dao-TVacationMap" id="IHf;lm9TegOId5qgBL{a">
+                                                                                                                                <mutation hover_type="LocalDate::startDate1"></mutation>
+                                                                                                                                <field name="DAO_FIELD">LocalDate::startDate1</field>
+                                                                                                                            </block>
+                                                                                                                        </value>
+                                                                                                                    </block>
+                                                                                                                </value>
+                                                                                                            </block>
+                                                                                                        </statement>
+                                                                                                        <next>
+                                                                                                            <block type="controls_if" id="#f%@[LRma_~J~.M/lt|S">
+                                                                                                                <value name="IF0">
+                                                                                                                    <block type="core_fun_verify" id="RgbvVL[p.*l2_7~2i`Gw">
+                                                                                                                        <field name="CORE_FUNCTION">verify_is_not_null_or_zero</field>
+                                                                                                                        <value name="value_default">
+                                                                                                                            <block type="get-dao-TVacationMap" id="jM8w8{AM=HLr6T}#@zeG">
+                                                                                                                                <mutation hover_type="Integer::days2"></mutation>
+                                                                                                                                <field name="DAO_FIELD">Integer::days2</field>
+                                                                                                                            </block>
+                                                                                                                        </value>
+                                                                                                                    </block>
+                                                                                                                </value>
+                                                                                                                <statement name="DO0">
+                                                                                                                    <block type="rowtableString::periodo_2" id=";d}qo#%d@V7ej*aRAHu5">
+                                                                                                                        <value name="fields_model">
+                                                                                                                            <block type="concaty" id="a!XUKZn635Np;U?zcp0L" inline="true">
+                                                                                                                                <mutation count="3"></mutation>
+                                                                                                                                <value name="concat_value">
+                                                                                                                                    <block type="text" id="dwWw{kfZMK909DesavOK">
+                                                                                                                                        <field name="TEXT">Gozo de </field>
+                                                                                                                                    </block>
+                                                                                                                                </value>
+                                                                                                                                <value name="CONCAT1">
+                                                                                                                                    <block type="get-dao-TVacationMap" id="*EuE#;h9p:@,in|-Cq],">
+                                                                                                                                        <mutation hover_type="Integer::days2"></mutation>
+                                                                                                                                        <field name="DAO_FIELD">Integer::days2</field>
+                                                                                                                                    </block>
+                                                                                                                                </value>
+                                                                                                                                <value name="CONCAT2">
+                                                                                                                                    <block type="text" id="BGXU*kM!Y!t:Z8l3uqeF">
+                                                                                                                                        <field name="TEXT"> dia(a) a partir de </field>
+                                                                                                                                    </block>
+                                                                                                                                </value>
+                                                                                                                                <value name="CONCAT3">
+                                                                                                                                    <block type="get-dao-TVacationMap" id="zQQ,[8RR1WaX.M|Z?s7O">
+                                                                                                                                        <mutation hover_type="LocalDate::startDate2"></mutation>
+                                                                                                                                        <field name="DAO_FIELD">LocalDate::startDate2</field>
+                                                                                                                                    </block>
+                                                                                                                                </value>
+                                                                                                                            </block>
+                                                                                                                        </value>
+                                                                                                                    </block>
+                                                                                                                </statement>
+                                                                                                                <next>
+                                                                                                                    <block type="controls_if" id="aU~Qn1f?WRA71}BKifAj">
+                                                                                                                        <value name="IF0">
+                                                                                                                            <block type="core_fun_verify" id="cif)_=_~IX]8R7hJF9/Z">
+                                                                                                                                <field name="CORE_FUNCTION">verify_is_not_null_or_zero</field>
+                                                                                                                                <value name="value_default">
+                                                                                                                                    <block type="get-dao-TVacationMap" id="eS=z{7HZ0Nb_ETJG7+`d">
+                                                                                                                                        <mutation hover_type="Integer::days3"></mutation>
+                                                                                                                                        <field name="DAO_FIELD">Integer::days3</field>
+                                                                                                                                    </block>
+                                                                                                                                </value>
+                                                                                                                            </block>
+                                                                                                                        </value>
+                                                                                                                        <statement name="DO0">
+                                                                                                                            <block type="rowtableString::periodo_3" id="yxnn.R0o_DyJ28-KB/)R">
+                                                                                                                                <value name="fields_model">
+                                                                                                                                    <block type="concaty" id="TDp|k}e)Jb6Woc6t0CO1" inline="true">
+                                                                                                                                        <mutation count="3"></mutation>
+                                                                                                                                        <value name="concat_value">
+                                                                                                                                            <block type="text" id="V5nn,v{:HxAUb:(0GwGc">
+                                                                                                                                                <field name="TEXT">Gozo de </field>
+                                                                                                                                            </block>
+                                                                                                                                        </value>
+                                                                                                                                        <value name="CONCAT1">
+                                                                                                                                            <block type="get-dao-TVacationMap" id=".W9yiKKf_0jNj#(T4K{Z">
+                                                                                                                                                <mutation hover_type="Integer::days3"></mutation>
+                                                                                                                                                <field name="DAO_FIELD">Integer::days3</field>
+                                                                                                                                            </block>
+                                                                                                                                        </value>
+                                                                                                                                        <value name="CONCAT2">
+                                                                                                                                            <block type="text" id="/Hn~wY%6i7qY!tQlx@Ad">
+                                                                                                                                                <field name="TEXT"> dia(a) a partir de </field>
+                                                                                                                                            </block>
+                                                                                                                                        </value>
+                                                                                                                                        <value name="CONCAT3">
+                                                                                                                                            <block type="get-dao-TVacationMap" id="YxqNE|mu3OE%L?^#qV#B">
+                                                                                                                                                <mutation hover_type="LocalDate::startDate3"></mutation>
+                                                                                                                                                <field name="DAO_FIELD">LocalDate::startDate3</field>
+                                                                                                                                            </block>
+                                                                                                                                        </value>
+                                                                                                                                    </block>
+                                                                                                                                </value>
+                                                                                                                            </block>
+                                                                                                                        </statement>
+                                                                                                                        <next>
+                                                                                                                            <block type="controls_if" id="@@6Z[~qwtR{P|%i:?lJ`">
+                                                                                                                                <value name="IF0">
+                                                                                                                                    <block type="core_fun_verify" id="I(jpVDEkvSJ.A?[zrd_q">
+                                                                                                                                        <field name="CORE_FUNCTION">verify_is_not_null_or_zero</field>
+                                                                                                                                        <value name="value_default">
+                                                                                                                                            <block type="get-dao-TVacationMap" id="YtzK}d)^Wd1]tLPg-s]e">
+                                                                                                                                                <mutation hover_type="Integer::days4"></mutation>
+                                                                                                                                                <field name="DAO_FIELD">Integer::days4</field>
+                                                                                                                                            </block>
+                                                                                                                                        </value>
+                                                                                                                                    </block>
+                                                                                                                                </value>
+                                                                                                                                <statement name="DO0">
+                                                                                                                                    <block type="rowtableString::periodo_4" id="GKJce:u?(hO,UCqcaAr-">
+                                                                                                                                        <value name="fields_model">
+                                                                                                                                            <block type="concaty" id="C6a3G^b{2_kIaFv!W3}X" inline="true">
+                                                                                                                                                <mutation count="3"></mutation>
+                                                                                                                                                <value name="concat_value">
+                                                                                                                                                    <block type="text" id="!+,7hyE7klf-3aK6wcG9">
+                                                                                                                                                        <field name="TEXT">Gozo de </field>
+                                                                                                                                                    </block>
+                                                                                                                                                </value>
+                                                                                                                                                <value name="CONCAT1">
+                                                                                                                                                    <block type="get-dao-TVacationMap" id="ML~dN3HYl|5Lf9pg0O2c">
+                                                                                                                                                        <mutation hover_type="Integer::days4"></mutation>
+                                                                                                                                                        <field name="DAO_FIELD">Integer::days4</field>
+                                                                                                                                                    </block>
+                                                                                                                                                </value>
+                                                                                                                                                <value name="CONCAT2">
+                                                                                                                                                    <block type="text" id="QV2;46IH-HG(kI7bp/ZP">
+                                                                                                                                                        <field name="TEXT"> dia(a) a partir de </field>
+                                                                                                                                                    </block>
+                                                                                                                                                </value>
+                                                                                                                                                <value name="CONCAT3">
+                                                                                                                                                    <block type="get-dao-TVacationMap" id="mW-Ob1T(Dk+WpNMZK|qo">
+                                                                                                                                                        <mutation hover_type="LocalDate::startDate3"></mutation>
+                                                                                                                                                        <field name="DAO_FIELD">LocalDate::startDate3</field>
+                                                                                                                                                    </block>
+                                                                                                                                                </value>
+                                                                                                                                            </block>
+                                                                                                                                        </value>
+                                                                                                                                    </block>
+                                                                                                                                </statement>
+                                                                                                                                <next>
+                                                                                                                                    <block type="controls_if" id="E(WUy,tt@ZuKCgXcGz5#">
+                                                                                                                                        <value name="IF0">
+                                                                                                                                            <block type="logic_compare" id="^pS3_9T7e*_tsR}:8Hr!">
+                                                                                                                                                <field name="OP">NEQ</field>
+                                                                                                                                                <value name="A">
+                                                                                                                                                    <block type="get-dao-TVacationMap" id="Clim|BB-}F.n4ON`Thd^">
+                                                                                                                                                        <mutation hover_type="TEmployees_FK#::employeeId"></mutation>
+                                                                                                                                                        <field name="DAO_FIELD">TEmployees_FK#::employeeId</field>
+                                                                                                                                                        <value name="dao_rela">
+                                                                                                                                                            <block type="get-dao-TEmployees" id="-2!s]eT-s%gIQ[mMP~L7">
+                                                                                                                                                                <mutation hover_type="String::email"></mutation>
+                                                                                                                                                                <field name="DAO_FIELD">String::email</field>
+                                                                                                                                                            </block>
+                                                                                                                                                        </value>
+                                                                                                                                                    </block>
+                                                                                                                                                </value>
+                                                                                                                                                <value name="B">
+                                                                                                                                                    <block type="core_fun_atual" id="XDNRThkmy^h?`)Jk|@T*">
+                                                                                                                                                        <field name="CORE_FUNCTION">String::email_utilizador_atual</field>
+                                                                                                                                                    </block>
+                                                                                                                                                </value>
+                                                                                                                                            </block>
+                                                                                                                                        </value>
+                                                                                                                                        <statement name="DO0">
+                                                                                                                                            <block type="set_visible_row" id="?LM8IbV-x=C)vPnb6a?E">
+                                                                                                                                                <field name="set_visible_row">btn_meu_mapa</field>
+                                                                                                                                            </block>
+                                                                                                                                        </statement>
+                                                                                                                                        <next>
+                                                                                                                                            <block type="rowtableString::map_id" id="+5Jz/JynG6^j;KeFRdRq">
+                                                                                                                                                <value name="fields_model">
+                                                                                                                                                    <block type="get-dao-TVacationMap" id="SaNb!qL7C-Gc*]w~l_q2">
+                                                                                                                                                        <mutation hover_type="Integer_PK#::vacationMapId"></mutation>
+                                                                                                                                                        <field name="DAO_FIELD">Integer_PK#::vacationMapId</field>
+                                                                                                                                                    </block>
+                                                                                                                                                </value>
+                                                                                                                                            </block>
+                                                                                                                                        </next>
+                                                                                                                                    </block>
+                                                                                                                                </next>
+                                                                                                                            </block>
+                                                                                                                        </next>
+                                                                                                                    </block>
+                                                                                                                </next>
+                                                                                                            </block>
+                                                                                                        </next>
+                                                                                                    </block>
+                                                                                                </next>
+                                                                                            </block>
+                                                                                        </next>
+                                                                                    </block>
+                                                                                </next>
+                                                                            </block>
+                                                                        </next>
+                                                                    </block>
+                                                                </next>
+                                                            </block>
+                                                        </statement>
+                                                        <value name="ADD1">
+                                                            <block type="get-dao-TVacationMap" id=":R;:aV;uq`9a{5^~LYK?">
+                                                                <mutation hover_type="String::year"></mutation>
+                                                                <field name="DAO_FIELD">String::year</field>
+                                                            </block>
+                                                        </value>
+                                                        <value name="ADD1STATE2">
+                                                            <block type="mod_formform_1" id="7qLtAf~7=sX6^%s+BGD:">
+                                                                <field name="get_model">String::ano</field>
+                                                            </block>
+                                                        </value>
+                                                    </block>
+                                                </next>
+                                            </block>
+                                        </next>
+                                    </block>
+                                </next>
+                            </block>
+                        </statement>
+                    </block>
+                </statement>
+                <statement name="filtrar">
+                    <block type="custombutton" id=":]i(Z11fW1)0{N-~ASJ(" inline="true">
+                        <field name="return">forward</field>
+                        <field name="page">Mapa_de_ferias</field>
+                    </block>
+                </statement>
+                <statement name="meu_mapa">
+                    <block type="enviar_p" id="]w{dO,+ecbN+bEblc,5Q">
+                        <field name="iskey">map_id</field>
+                        <next>
+                            <block type="editar_dao" id="IH9Pcmc?.F~4,DPNjP=a"></block>
+                        </next>
+                    </block>
+                </statement>
+            </block>
+        </xml>
+    </blockly>
+</rows>

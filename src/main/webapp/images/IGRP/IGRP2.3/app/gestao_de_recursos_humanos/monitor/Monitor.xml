@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/IGRP-Template/images/IGRP/IGRP2.3/app/gestao_de_recursos_humanos/monitor/Monitor.xsl" type="text/xsl"?>
+<rows>
+    <link_img>/IGRP-Template/images/IGRP/IGRP2.3</link_img>
+    <title>Dummie XML prototype</title>
+    <site>
+        <welcome_note>Oba</welcome_note>
+        <footer_note>2019 - Copyright NOSI v.190711</footer_note>
+        <user_name>Hexagon</user_name>
+        <button type="specific">
+            <title>Sair</title>
+            <app>DUA</app>
+            <page />
+            <link>#</link>
+            <target>_self</target>
+            <img>exit.png</img>
+        </button>
+    </site>
+    <page>Monitor</page>
+    <app>gestao_de_recursos_humanos</app>
+    <plsql>
+        <action>index</action>
+        <package_instance></package_instance>
+        <package_db>nosi.webapps.gestao_de_recursos_humanos.pages</package_db>
+        <package_html>Monitor</package_html>
+        <table_name></table_name>
+        <with_replace>false</with_replace>
+        <with_label>false</with_label>
+        <with_biztalk>false</with_biztalk>
+        <dynamic_menu>false</dynamic_menu>
+        <copy_menu>false</copy_menu>
+        <package_copy_db />
+        <package_copy_html />
+        <preserve_url>webapps?r=igrp/page/preserveUrl&amp;p_id=87</preserve_url>
+    </plsql>
+    <slide-menu file="../images/IGRP/IGRP2.3/xml/IGRP-slide-menu.xml?v=2" />
+    <top_menu file="../images/IGRP/IGRP2.3/xml/IGRP-top_menu.xml?v=2" />
+    <content>
+        <title>Monitor</title>
+        <statbox_1 type="statbox" xml-type="form" gen-type="container" gen-group="">
+            <fields>
+                <statbox_1_title name="p_statbox_1_title" type="text" maxlength="4000">
+                    <label>Box Title</label>
+                    <value>Total de Funcionarios</value>
+                </statbox_1_title>
+                <statbox_1_val name="p_statbox_1_val" type="text" maxlength="4000">
+                    <label>Value</label>
+                    <value>194</value>
+                </statbox_1_val>
+                <statbox_1_txt name="p_statbox_1_txt" type="text" maxlength="4000">
+                    <label>Url Text</label>
+                    <value>Ver Funcionários</value>
+                </statbox_1_txt>
+                <statbox_1_url name="p_statbox_1_url" type="text" maxlength="4000">
+                    <label>Url</label>
+                    <value>http://www.example.com</value>
+                </statbox_1_url>
+                <statbox_1_bg name="p_statbox_1_bg" type="text" maxlength="4000">
+                    <label>Background</label>
+                    <value>cp-cyan</value>
+                </statbox_1_bg>
+                <statbox_1_icn name="p_statbox_1_icn" type="text" maxlength="4000" persist="true">
+                    <label>Icon</label>
+                    <value>fa-users</value>
+                </statbox_1_icn>
+            </fields>
+        </statbox_1>
+        <chart_1 type="chart" xml-type="chart" title="Funcionários Por Departamentos" gen-type="container" gen-group="">
+            <caption/>
+            <chart_type>pie</chart_type>
+            <xaxys>Eixo de X</xaxys>
+            <yaxys>Eixo de Y</yaxys>
+            <url>#</url>
+            <label>
+                <col>Ano</col>
+                <col>X1</col>
+                <col>X2</col>
+                <col>X3</col>
+                <col>X4</col>
+            </label>
+            <value>
+                <row>
+                    <col>2010</col>
+                    <col>228</col>
+                    <col>269</col>
+                    <col>739</col>
+                    <col>209</col>
+                </row>
+                <row>
+                    <col>2009</col>
+                    <col>619</col>
+                    <col>477</col>
+                    <col>518</col>
+                    <col>523</col>
+                </row>
+                <row>
+                    <col>2015</col>
+                    <col>1010</col>
+                    <col>276</col>
+                    <col>639</col>
+                    <col>565</col>
+                </row>
+            </value>
+            <colors>
+                <col>#c03ab9</col>
+                <col>#8ece0b</col>
+                <col>#17b12c</col>
+                <col>#c79e7b</col>
+            </colors>
+        </chart_1>
+        <chart_2 type="chart" xml-type="chart" title="Funcionários Por Função" gen-type="container" gen-group="">
+            <caption/>
+            <chart_type>column</chart_type>
+            <xaxys>Eixo de X</xaxys>
+            <yaxys>Eixo de Y</yaxys>
+            <url>#</url>
+            <label>
+                <col>Ano</col>
+                <col>X1</col>
+                <col>X2</col>
+                <col>X3</col>
+                <col>X4</col>
+            </label>
+            <value>
+                <row>
+                    <col>2010</col>
+                    <col>523</col>
+                    <col>120</col>
+                    <col>862</col>
+                    <col>345</col>
+                </row>
+                <row>
+                    <col>2009</col>
+                    <col>262</col>
+                    <col>937</col>
+                    <col>803</col>
+                    <col>877</col>
+                </row>
+                <row>
+                    <col>2015</col>
+                    <col>1010</col>
+                    <col>574</col>
+                    <col>417</col>
+                    <col>140</col>
+                </row>
+            </value>
+            <colors>
+                <col>#16318c</col>
+                <col>#bedfa3</col>
+                <col>#032b2d</col>
+                <col>#338333</col>
+            </colors>
+        </chart_2>
+    </content>
+    <blockly>
+        <imports>
+            <import type="grafico">chart_1</import>
+            <import type="grafico">chart_2</import>
+            <import type="statbox">statbox_1</import>
+            <import type="dao">TEmployees</import>
+            <import type="dao">TDepartments</import>
+            <import type="dao">TJobs</import>
+        </imports>
+        <xml>
+            <block type="controller" id="controller" x="388" y="38">
+                <statement name="index">
+                    <block type="sttbox_statbox_1" id="+9+d%)bLrf,IiM17RB%D" inline="true">
+                        <mutation order="null" operation="null" limit="null" collectors="null" crud="null" statistdrop="get_counting" ajax="null" count="NaN"></mutation>
+                        <field name="dao">TEmployees</field>
+                        <field name="statistDrop">get_counting</field>
+                        <statement name="value2">
+                            <block type="statfields_String::statbox_1_val" id="-=`+=3!vyl@#OGYktARj">
+                                <field name="collectors">value</field>
+                                <next>
+                                    <block type="statfields_String::statbox_1_url" id="XnDX4e=E9DUiDfhqlZ(|">
+                                        <value name="fields_model">
+                                            <block type="core_fn_link" id="s3SW5QtuaIOhrR-.!pPD" inline="true">
+                                                <mutation count="NaN"></mutation>
+                                                <field name="value2">gestao_de_recursos_humanos</field>
+                                                <field name="value3">Lista_de_funcionarios</field>
+                                                <field name="value4">index</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                </next>
+                            </block>
+                        </statement>
+                        <next>
+                            <block type="grafico_chart_1" id="B()rq4Ku]KSQJehik4u3" inline="true">
+                                <mutation order="null" operation="null" limit="null" collectors="null" crud="null" statistdrop="null" ajax="null" count="NaN"></mutation>
+                                <field name="dao">TEmployees</field>
+                                <value name="groupby">
+                                    <block type="get-dao-TEmployees" id=");FC68m]F39Vgbi2KDf@">
+                                        <mutation hover_type="TDepartments_FK#::departmentId"></mutation>
+                                        <field name="DAO_FIELD">TDepartments_FK#::departmentId</field>
+                                        <value name="dao_rela">
+                                            <block type="get-dao-TDepartments" id="ifsLcvhHEvmd4!jixuh+">
+                                                <mutation hover_type="String::departmentName"></mutation>
+                                                <field name="DAO_FIELD">String::departmentName</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                </value>
+                                <value name="statistics">
+                                    <block type="get-dao-TEmployees" id="jOE3RD(fA-`Peto5oKbK">
+                                        <mutation hover_type="TDepartments_FK#::departmentId"></mutation>
+                                        <field name="DAO_FIELD">TDepartments_FK#::departmentId</field>
+                                        <value name="dao_rela">
+                                            <block type="get-dao-TDepartments" id="2vsFHzCv7LduaD5(BqPu">
+                                                <mutation hover_type="String::departmentName"></mutation>
+                                                <field name="DAO_FIELD">String::departmentName</field>
+                                            </block>
+                                        </value>
+                                    </block>
+                                </value>
+                                <statement name="value2">
+                                    <block type="EixoX" id="[qRY7HWTeh[d;k2zED[S">
+                                        <value name="eixo">
+                                            <block type="get-dao-TEmployees" id="L/(D8b7+1h=r`)p0]8WL">
+                                                <mutation hover_type="TDepartments_FK#::departmentId"></mutation>
+                                                <field name="DAO_FIELD">TDepartments_FK#::departmentId</field>
+                                                <value name="dao_rela">
+                                                    <block type="get-dao-TDepartments" id="y`rjORr~x[[lb6_-syjR">
+                                                        <mutation hover_type="String::departmentName"></mutation>
+                                                        <field name="DAO_FIELD">String::departmentName</field>
+                                                    </block>
+                                                </value>
+                                            </block>
+                                        </value>
+                                        <next>
+                                            <block type="EixoY_Z" id="ClFHE)E/D}7~51T134Pn">
+                                                <field name="collectors">counting</field>
+                                                <value name="eixo">
+                                                    <block type="get-dao-TEmployees" id="j^sN)]Nn}-+FGE9;iw^P">
+                                                        <mutation hover_type="TDepartments_FK#::departmentId"></mutation>
+                                                        <field name="DAO_FIELD">TDepartments_FK#::departmentId</field>
+                                                        <value name="dao_rela">
+                                                            <block type="get-dao-TDepartments" id="X4U5R5NPNi?CQxuc27vK">
+                                                                <mutation hover_type="String::departmentName"></mutation>
+                                                                <field name="DAO_FIELD">String::departmentName</field>
+                                                            </block>
+                                                        </value>
+                                                    </block>
+                                                </value>
+                                            </block>
+                                        </next>
+                                    </block>
+                                </statement>
+                                <next>
+                                    <block type="grafico_chart_2" id="Yft9NIPP:.MEuV~F0;cu" inline="true">
+                                        <mutation order="null" operation="null" limit="null" collectors="null" crud="null" statistdrop="null" ajax="null" count="NaN"></mutation>
+                                        <field name="dao">TEmployees</field>
+                                        <value name="groupby">
+                                            <block type="get-dao-TEmployees" id="8YV3xTmwx1|XQ/n]UebR">
+                                                <mutation hover_type="TJobs_FK#::jobId"></mutation>
+                                                <field name="DAO_FIELD">TJobs_FK#::jobId</field>
+                                                <value name="dao_rela">
+                                                    <block type="get-dao-TJobs" id="Jh7:wXCPZfSAfFC/xCpm">
+                                                        <mutation hover_type="String::jobTitle"></mutation>
+                                                        <field name="DAO_FIELD">String::jobTitle</field>
+                                                    </block>
+                                                </value>
+                                            </block>
+                                        </value>
+                                        <value name="statistics">
+                                            <block type="get-dao-TEmployees" id="#2a)8xlADX4l|OyYm!E-">
+                                                <mutation hover_type="TJobs_FK#::jobId"></mutation>
+                                                <field name="DAO_FIELD">TJobs_FK#::jobId</field>
+                                                <value name="dao_rela">
+                                                    <block type="get-dao-TJobs" id="QO@aOe`w3UuLS?ujMi`=">
+                                                        <mutation hover_type="String::jobTitle"></mutation>
+                                                        <field name="DAO_FIELD">String::jobTitle</field>
+                                                    </block>
+                                                </value>
+                                            </block>
+                                        </value>
+                                        <statement name="value2">
+                                            <block type="EixoY" id="`bVR}9!IEMD|t`}|_T7:">
+                                                <value name="eixo">
+                                                    <block type="get-dao-TEmployees" id="rnw_XXyR^^||Zy,q16~z">
+                                                        <mutation hover_type="TJobs_FK#::jobId"></mutation>
+                                                        <field name="DAO_FIELD">TJobs_FK#::jobId</field>
+                                                        <value name="dao_rela">
+                                                            <block type="get-dao-TJobs" id="Mmaklf@C5#Uu?AVVSr+~">
+                                                                <mutation hover_type="String::jobTitle"></mutation>
+                                                                <field name="DAO_FIELD">String::jobTitle</field>
+                                                            </block>
+                                                        </value>
+                                                    </block>
+                                                </value>
+                                                <next>
+                                                    <block type="EixoZ" id="oLC7@5/lCjUOqd0EEFqm">
+                                                        <field name="collectors">counting</field>
+                                                        <value name="eixo">
+                                                            <block type="get-dao-TEmployees" id="{4VCZQ_C5(Us5_!TLMCr">
+                                                                <mutation hover_type="TJobs_FK#::jobId"></mutation>
+                                                                <field name="DAO_FIELD">TJobs_FK#::jobId</field>
+                                                                <value name="dao_rela">
+                                                                    <block type="get-dao-TJobs" id="0r{*Fmf2YS`:;-3e_PYh">
+                                                                        <mutation hover_type="String::jobTitle"></mutation>
+                                                                        <field name="DAO_FIELD">String::jobTitle</field>
+                                                                    </block>
+                                                                </value>
+                                                            </block>
+                                                        </value>
+                                                    </block>
+                                                </next>
+                                            </block>
+                                        </statement>
+                                    </block>
+                                </next>
+                            </block>
+                        </next>
+                    </block>
+                </statement>
+            </block>
+        </xml>
+    </blockly>
+</rows>

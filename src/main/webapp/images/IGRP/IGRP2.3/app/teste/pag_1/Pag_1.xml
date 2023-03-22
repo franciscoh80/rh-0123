@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/IGRP-Template/images/IGRP/IGRP2.3/app/teste/pag_1/Pag_1.xsl" type="text/xsl"?>
+<rows>
+    <link_img>/IGRP-Template/images/IGRP/IGRP2.3</link_img>
+    <title>Dummie XML prototype</title>
+    <site>
+        <welcome_note>Oba</welcome_note>
+        <footer_note>2019 - Copyright NOSI v.190711</footer_note>
+        <user_name>Hexagon</user_name>
+        <button type="specific">
+            <title>Sair</title>
+            <app>DUA</app>
+            <page />
+            <link>#</link>
+            <target>_self</target>
+            <img>exit.png</img>
+        </button>
+    </site>
+    <page>Pag_1</page>
+    <app>teste</app>
+    <plsql>
+        <action>index</action>
+        <package_instance></package_instance>
+        <package_db>nosi.webapps.teste.pages</package_db>
+        <package_html>Pag_1</package_html>
+        <table_name></table_name>
+        <with_replace>false</with_replace>
+        <with_label>false</with_label>
+        <with_biztalk>false</with_biztalk>
+        <dynamic_menu>false</dynamic_menu>
+        <copy_menu>false</copy_menu>
+        <package_copy_db />
+        <package_copy_html />
+        <preserve_url>webapps?r=igrp/page/preserveUrl&amp;p_id=92</preserve_url>
+    </plsql>
+    <slide-menu file="../images/IGRP/IGRP2.3/xml/IGRP-slide-menu.xml?v=2" />
+    <top_menu file="../images/IGRP/IGRP2.3/xml/IGRP-top_menu.xml?v=2" />
+    <content>
+        <title>Pag 1</title>
+        <form_1 type="form" xml-type="form" gen-type="container" gen-group="">
+            <fields>
+                <form_1_select_1 name="p_form_1_select_1" type="select" multiple="false" tags="false" load_service_data="false" domain="Genero « teste" maxlength="250" required="false" change="false" disabled="false" right="false" java-type="" tooltip="false" disable_copy_paste="false">
+                    <label>Select</label>
+                    <list>
+                        <option/>
+                        <option>
+                            <text/>
+                            <value/>
+                        </option>
+                    </list>
+                </form_1_select_1>
+            </fields>
+        </form_1>
+    </content>
+    <blockly>
+        <imports></imports>
+        <xml>
+            <block type="controller" id="controller" x="388" y="13"></block>
+        </xml>
+    </blockly>
+</rows>

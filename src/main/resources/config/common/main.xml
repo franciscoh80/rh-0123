@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+	<comment>All basic and advanced IGRP configuration parameters</comment>
+	
+	<!-- igrpweb environment parameter (dev|test|sta|prod) -->
+	<entry key="igrp.env">dev</entry>
+	
+	<entry key="igrp.datasource.connection-name">hibernate-igrp-core</entry>
+	
+	<!-- igrpweb workspace parameter (absolute path) -->
+	<entry key="igrp.workspace">C:\Formacao0123\IGRP-Java-Template-Eclipse-master\IGRP-Template</entry> 
+	
+	<!-- igrpweb authentication type parameter (db|ldap|oauth2-openid) -->
+	<entry key="igrp.authentication_type">db</entry> 
+	
+	<!-- igrpweb password recovery parameter: enable or not the password recovery funcionality -->
+	<entry key="igrp.pwdRecover">false</entry>
+	
+	<!--  -->
+	<entry key="igrp.authentication.govcv.enbaled">false</entry>
+	
+	<!-- igrpweb identity server (autentika.gov.cv) service --> 
+	<entry key="ids.autentika.enabled">false</entry> 
+	<entry key="ids.autentika.RemoteUserStoreManagerService-wsdl-url"></entry>
+	<entry key="ids.autentika.admin-usn"></entry> 
+	<entry key="ids.autentika.admin-pwd"></entry>
+	
+	<!-- Identity server parameters --> 
+	<!-- <entry key="ids.oauth2-openid.client_id">vPanMyB0P1J4prafmwffiViOfOIa</entry>
+    <entry key="ids.oauth2-openid.client_secret">VuOv9pRNMs3sIJnblsDRhgMVYHga</entry> -->
+	<!-- <entry key="ids.oauth2-openid.client_id">rxiDBENFgTS7GE7PWIL5QiG0TRUa</entry>
+	<entry key="ids.oauth2-openid.client_secret">KgYkhxxjp9fLy5tuL8iWPKHjMfca</entry> -->
+	<!-- <entry key="ids.oauth2-openid.endpoint.token">https://autentika.gov.cv/oauth2/token</entry>
+	<entry key="ids.oauth2-openid.endpoint.user">https://autentika.gov.cv/oauth2/userinfo?schema=openid</entry>
+	<entry key="ids.oauth2-openid.endpoint.authorize">https://autentika.gov.cv/oauth2/authorize</entry>
+	<entry key="ids.oauth2-openid.endpoint.redirect_uri">http://localhost:8080/IGRP/index.jsp</entry> 
+	<entry key="ids.oauth2-openid.endpoint.logout">https://autentika.gov.cv/oidc/logout</entry>  -->
+	
+	<!-- Ldap configuration parameters -->
+	<entry key="ldap.ad.url"></entry>
+	<entry key="ldap.ad.username"></entry>
+	<entry key="ldap.ad.password"></entry>
+	<entry key="ldap.ad.base"></entry>
+	<entry key="ldap.ad.authentication_filter"></entry>
+	<entry key="ldap.ad.entryDN"></entry>
+	
+	<!-- Default configuration parameters of server smtp (gmail) -->
+	<entry key="java.net.preferIPv4Stack"></entry>
+	<entry key="mail.smtp.host"></entry>
+	<entry key="mail.smtp.socketFactory.port"></entry>
+	<entry key="mail.smtp.socketFactory.class"></entry>
+	<entry key="mail.smtp.auth"></entry>
+	<entry key="mail.smtp.port"></entry>
+	<entry key="mail.user"></entry>
+	<entry key="mail.password"></entry>
+	
+	
+	
+	<!-- igrpweb as a kriol platform --> 
+	<!--  -->
+	<!-- Allows to addrole to user when register a new one through identity server (autentika.gov.cv) service -->
+	<entry key="kriol.addrole.user">false</entry>
+	
+	
+	
+	
+</properties>
